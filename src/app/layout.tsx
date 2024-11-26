@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Footer from "./components/footer";
-import Navbar from "./components/navbar";
 
 import "./globals.css";
 import { SanityLive } from "@/sanity/live";
+import { Navbar } from "./components/navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",

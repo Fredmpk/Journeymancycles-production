@@ -4,7 +4,6 @@ import Products from "./components/products";
 import Gallery from "./components/gallery";
 import About from "./components/about";
 import Footer from "./components/footer";
-import Navbar from "./components/navbar";
 import "./globals.css";
 
 export default function Home() {

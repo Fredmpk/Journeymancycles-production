@@ -1,28 +1,43 @@
-import Link from "next/link";
+import React from "react";
 import { BurgerMenu } from "./burger-menu";
+import Link from "next/link";
+import Image from "next/image";
 
-export default function Navbar() {
+export function Navbar() {
   return (
-    <div className="w-full !bg-zinc-400">
-      <nav className="">
-        <ul className="!bg-red-300">
+    <div className="fixed w-full bg-white opacity-90 shadow-md z-50">
+      <nav className="flex items-center justify-between align-items text-lg md:text-2xl tracking-wide m-[4vw] md:m-[3vw] h-[3vw] md:h-[1vw] ">
+        <div
+          className=" relative aspect-square  h-[8vw] md:h-[5vw]
+           m-3
+          "
+        >
+          <img src="/erdmannlogo.png"></img>
+        </div>
+        <div className="flex items-center">
+          <Link href="/" className="">
+            Journeymancycles
+          </Link>
+        </div>
+        <ul
+          className="items-center gap-4 md:gap-9 hidden md:flex"
+          id="navbar__right"
+        >
           <li>
-            <Link href="/#skills" className="text-red-500">
-              skills
-            </Link>
+            <Link href="/#products">Die Modelle</Link>
           </li>
           <li>
-            <Link href="/#bio">bio</Link>
+            <Link href="/#gallery">Galerie</Link>
           </li>
 
           <li>
-            <Link href="/#projects">projekte lala bu bu</Link>
+            <Link href="/#about">About</Link>
           </li>
           {/* <li>
             <a href="#">kontakt</a>
           </li> */}
         </ul>
-        {/* <BurgerMenu /> */}
+        <BurgerMenu />
       </nav>
     </div>
   );
