@@ -3,6 +3,7 @@ import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 
 import "./globals.css";
+import { SanityLive } from "@/sanity/live";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer></Footer>
+        <SanityLive />
       </body>
     </html>
   );
