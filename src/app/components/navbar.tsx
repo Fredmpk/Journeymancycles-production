@@ -12,7 +12,7 @@ export function Navbar() {
            m-3
           "
         >
-          <img src="/erdmannlogo.png"></img>
+          <img src="/img/erdmannlogo.png"></img>
         </div>
         <div className="flex items-center">
           <Link href="/" className="">

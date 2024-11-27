@@ -9,6 +9,9 @@ export default {
   theme: {
     extend: {
       colors: {},
+      fontFamily: {
+        sans: ['"Old Standard TT"', "serif"],
+      },
     },
   },
   plugins: [],
