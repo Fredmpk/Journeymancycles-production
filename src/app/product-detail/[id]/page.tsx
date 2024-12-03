@@ -1,0 +1,30 @@
+import { sanityFetch } from "@/sanity/live";
+import { PRODUCT_DETAIL_QUERY } from "@/sanity/queries";
+import { Product } from "@/sanity/types";
+
+export default async function ProductDetail({
+  params,
+}: {
+  params: { id: string };
+}) {
+  console.log("test, test");
+
+  const product: Product = await sanityFetch({
+    query: PRODUCT_DETAIL_QUERY,
+    params: { id: params.id },
+  }).then((result) => result.data); // it returns the part of an array, product.data would fit the type Product
+  console.log("Product:");
+
+  console.log(product);
+
+  if (!product) {
+    return <div>Product not found</div>;
+  }
+
+  return (
+    <div>
+      <h1>{product.title}</h1>
+      <h2>Hallo Hallo</h2>
+    </div>
+  );
+}
