@@ -111,6 +111,17 @@ export type Product = {
     crop?: SanityImageCrop;
     _type: "image";
   };
+  bgImage?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
   gallery?: Array<{
     asset?: {
       _ref: string;

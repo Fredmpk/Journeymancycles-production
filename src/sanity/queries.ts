@@ -8,6 +8,11 @@ export const PRODUCTS_QUERY = defineQuery(`*[_type == "product"]{
     url
     }
     },
+    bgImage{
+    asset ->{
+    url
+    }
+    },
   }`);
 
 export const PRODUCT_DETAIL_QUERY = defineQuery(

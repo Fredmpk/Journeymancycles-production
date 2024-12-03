@@ -1,3 +1,4 @@
+import { urlFor } from "@/sanity/imageUrlBuilder";
 import { sanityFetch } from "@/sanity/live";
 import { PRODUCT_DETAIL_QUERY } from "@/sanity/queries";
 import { Product } from "@/sanity/types";
@@ -22,9 +23,12 @@ export default async function ProductDetail({
   }
 
   return (
-    <div>
+    <div
+      className={`pt-[11vw] md:pt-[7vw] bg-cover ${product.bgImage ? `bg-[url(${urlFor(product.bgImage).url()})]` : ""}`}
+    >
+      {/* // irgendwie kriegt er das bg-image noch nicht, das muss nochmal aktualisiert werden */}
       <h1>{product.title}</h1>
-      <h2>Hallo Hallo</h2>
+      {product.mainImage && <img src={urlFor(product.mainImage).url()}></img>}
     </div>
   );
 }
