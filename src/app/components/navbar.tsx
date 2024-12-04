@@ -15,12 +15,15 @@ export function Navbar() {
           <img src="/img/erdmannlogo.png"></img>
         </div>
         <div className="flex items-center">
-          <Link href="/" className="">
+          <Link
+            href="/"
+            className="absolute left-1/2 transform -translate-x-1/2"
+          >
             Journeymancycles
           </Link>
         </div>
         <ul
-          className="items-center gap-4 md:gap-9 hidden md:flex"
+          className="items-center gap-4 md:gap-9 hidden lg:flex"
           id="navbar__right"
         >
           <li>

@@ -234,21 +234,5 @@ export type SanityAssetSourceData = {
   url?: string;
 };
 
-export type AllSanitySchemaTypes =
-  | SanityImagePaletteSwatch
-  | SanityImagePalette
-  | SanityImageDimensions
-  | Geopoint
-  | Slug
-  | Legal
-  | About
-  | Gallery
-  | Product
-  | SanityImageCrop
-  | SanityImageHotspot
-  | SanityImageAsset
-  | SanityImageMetadata
-  | Hero
-  | SanityFileAsset
-  | SanityAssetSourceData;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | Geopoint | Slug | Legal | About | Gallery | Product | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityImageMetadata | Hero | SanityFileAsset | SanityAssetSourceData;
 export declare const internalGroqTypeReferenceTo: unique symbol;

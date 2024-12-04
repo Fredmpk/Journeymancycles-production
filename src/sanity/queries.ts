@@ -8,11 +8,7 @@ export const PRODUCTS_QUERY = defineQuery(`*[_type == "product"]{
     url
     }
     },
-    bgImage{
-    asset ->{
-    url
-    }
-    },
+    
   }`);
 
 export const PRODUCT_DETAIL_QUERY = defineQuery(
@@ -20,6 +16,11 @@ export const PRODUCT_DETAIL_QUERY = defineQuery(
       _id, 
     title,
     mainImage{
+    asset ->{
+    url
+    }
+    },
+    bgImage{
     asset ->{
     url
     }
