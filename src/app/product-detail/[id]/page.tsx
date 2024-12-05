@@ -11,15 +11,10 @@ export default async function ProductDetail({
 }: {
   params: { id: string };
 }) {
-  console.log("test, test");
-
   const product: Product = await sanityFetch({
     query: PRODUCT_DETAIL_QUERY,
     params: { id: params.id },
   }).then((result) => result.data); // it returns the part of an array, product.data would fit the type Product
-  console.log("Product:");
-
-  console.log(product);
 
   if (!product) {
     return <div>Product not found</div>;
@@ -54,11 +49,15 @@ export default async function ProductDetail({
           <TabsTrigger value="description">Beschreibung</TabsTrigger>
           <TabsTrigger value="datesheet">Datenblatt</TabsTrigger>
         </TabsList>
-        <TabsContent value="description">
-          <AutosizeTextarea placeholder={product.description} maxHeight={500} />
+        <TabsContent value="description" className="">
+          <AutosizeTextarea
+            placeholder={product.description}
+            maxHeight={700}
+            className="p-[3vw] text-lg"
+          />
         </TabsContent>
         <TabsContent value="datesheet">
-          <AutosizeTextarea placeholder={product.dateSheet} maxHeight={500} />
+          <AutosizeTextarea placeholder={product.dateSheet} maxHeight={700} />
         </TabsContent>
       </Tabs>
     </div>
