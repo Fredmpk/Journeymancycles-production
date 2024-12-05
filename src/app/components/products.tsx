@@ -2,7 +2,6 @@ import { urlFor } from "@/sanity/imageUrlBuilder";
 import { Product } from "@/sanity/types";
 
 export default function Products({ products }: { products: Product[] }) {
-  console.log(products);
   return (
     <div className="relative w-full h-full bg-cover bg-[url('/img/products-bg.png')]">
       <div className="w-full h-full flex justify-center items-center p-4">

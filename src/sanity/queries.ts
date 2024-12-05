@@ -39,3 +39,21 @@ export const HERO_QUERY = defineQuery(`*[_type == "hero"][0]{
       }
     }
   }`);
+
+export const GALLERY_QUERY = defineQuery(`*[_type == "gallery"]{
+      _id,
+      _createdAt,
+      _updatedAt,
+      images[]{
+        ...,
+        asset->{
+          url,
+          metadata {
+            dimensions {
+              width,
+              height
+            }
+          }
+        }
+      }
+    }`);

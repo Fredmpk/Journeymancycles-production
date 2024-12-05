@@ -5,7 +5,7 @@ import About from "./components/about";
 import Footer from "./components/footer";
 import "./globals.css";
 import { sanityFetch } from "@/sanity/live";
-import { HERO_QUERY, PRODUCTS_QUERY } from "@/sanity/queries";
+import { GALLERY_QUERY, HERO_QUERY, PRODUCTS_QUERY } from "@/sanity/queries";
 import { HeroSection } from "./components/hero";
 
 export default async function Home() {
@@ -13,11 +13,13 @@ export default async function Home() {
 
   const { data: products } = await sanityFetch({ query: PRODUCTS_QUERY });
 
+  const { data: gallery } = await sanityFetch({ query: GALLERY_QUERY });
+
   return (
     <>
       <HeroSection mainVideo={hero?.mainVideo || null}></HeroSection>
       <Products products={products || null}></Products>
-      <Gallery></Gallery>
+      <Gallery gallery={gallery || null}></Gallery>
       <About></About>
     </>
   );
