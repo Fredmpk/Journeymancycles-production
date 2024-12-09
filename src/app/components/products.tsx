@@ -27,7 +27,7 @@ export default function Products({ products }: { products: Product[] }) {
                 className="w-full object-cover rounded-lg"
               />
             )}
-            <p className="absolute top-[12%] inset-0 flex justify-center text-white text-lg md:text-2xl lg:text-5xl">
+            <p className="absolute top-[12%] inset-0 flex justify-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
               {product.title}
             </p>
           </a>

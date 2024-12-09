@@ -29,10 +29,10 @@ export default async function ProductDetail({
 
         backgroundPosition: "center",
       }}
-      className="pt-[11vw] md:pt-[7vw] flex flex-col justify-center items-center"
+      className="pt-[11vw] md:pt-[7vw] flex flex-col justify-center items-center bg-cover"
     >
       {/* // irgendwie kriegt er das bg-image noch nicht, das muss nochmal aktualisiert werden */}
-      <div className="bg-white bg-opacity-55 rounded-full pt-[1vw] m-[3vw] ">
+      <div className="bg-zinc-400 bg-opacity-75 rounded-full pt-[1vw] m-[3vw] ">
         <h1 className="text-black font-bold text-3xl md:text-5xl lg:text-7xl px-[2vw]">
           {product.title}
         </h1>
@@ -44,7 +44,7 @@ export default async function ProductDetail({
           className="p-[3vw] rounded-[7%]"
         ></img>
       )}
-      <Tabs defaultValue="account" className="w-[400px] mb-[5vw]">
+      <Tabs defaultValue="description" className="w-[90vw] mb-[5vw]">
         <TabsList>
           <TabsTrigger value="description">Beschreibung</TabsTrigger>
           <TabsTrigger value="datesheet">Datenblatt</TabsTrigger>
