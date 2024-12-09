@@ -40,7 +40,7 @@ export const HERO_QUERY = defineQuery(`*[_type == "hero"][0]{
     }
   }`);
 
-export const GALLERY_QUERY = defineQuery(`*[_type == "gallery"]{
+export const GALLERY_QUERY = defineQuery(`*[_type == "gallery"][0]{
       _id,
       _createdAt,
       _updatedAt,

@@ -1,5 +1,7 @@
 import { urlFor } from "@/sanity/imageUrlBuilder";
 import { Gallery } from "@/sanity/types";
+import { buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function GallerySection({ gallery }: { gallery: Gallery }) {
   console.log(gallery);
@@ -15,9 +17,46 @@ export default function GallerySection({ gallery }: { gallery: Gallery }) {
             </h1>
           </div>
         </div>
-        {gallery.images?.map((image) => (
-          <img src={urlFor(image).url()} alt="" />
-        ))}
+        <div className="flex flex-row">
+          <div className="flex flex-col w-[55%]">
+            {gallery.images &&
+              gallery.images
+                .filter((image) => image.format == "landscape")
+                .map((image) => (
+                  <div key={image._key} className="w-full">
+                    <img
+                      src={urlFor(image).url()}
+                      alt="Image"
+                      className="rounded-xl w-full p-[1vw]"
+                    />
+                  </div>
+                ))
+                .slice(0, 3)}
+          </div>
+          <div className="flex flex-col justify-between w-[44%]">
+            {gallery.images &&
+              gallery.images
+                .filter((image) => image.format == "portrait")
+                .map((image) => (
+                  <div key={image._key} className="w-full">
+                    <img
+                      src={urlFor(image).url()}
+                      alt="Image"
+                      className="rounded-xl w-full p-[1vw]"
+                    />
+                  </div>
+                ))
+                .slice(0, 2)}
+          </div>
+        </div>
+        <div className="flex justify-center w-auto">
+          <Link
+            href={`/gallery`}
+            className={`${buttonVariants()} px-[7vw] m-[1vw] sm:text-xl`}
+          >
+            Mehr
+          </Link>
+        </div>
       </div>
     </>
   );
