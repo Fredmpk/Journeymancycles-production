@@ -2,6 +2,14 @@ import { urlFor } from "@/sanity/imageUrlBuilder";
 import { Gallery } from "@/sanity/types";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default function GallerySection({ gallery }: { gallery: Gallery }) {
   console.log(gallery);
@@ -23,13 +31,23 @@ export default function GallerySection({ gallery }: { gallery: Gallery }) {
               gallery.images
                 .filter((image) => image.format == "landscape")
                 .map((image) => (
-                  <div key={image._key} className="w-full">
-                    <img
-                      src={urlFor(image).url()}
-                      alt="Image"
-                      className="rounded-xl w-full p-[1vw]"
-                    />
-                  </div>
+                  <Dialog key={image._key}>
+                    <DialogTrigger>
+                      <img
+                        src={urlFor(image).url()}
+                        alt="Image"
+                        className="rounded-[2vw] w-full p-[1vw]"
+                      />
+                    </DialogTrigger>
+                    <DialogContent className="bg-zinc-300 rounded-[2vw]">
+                      <DialogTitle>Bildbeschreibung oder Titel?</DialogTitle>{" "}
+                      <img
+                        src={urlFor(image).url()}
+                        alt="Image"
+                        className="rounded-[2vw] w-full object-contain"
+                      />
+                    </DialogContent>
+                  </Dialog>
                 ))
                 .slice(0, 3)}
           </div>
@@ -38,13 +56,27 @@ export default function GallerySection({ gallery }: { gallery: Gallery }) {
               gallery.images
                 .filter((image) => image.format == "portrait")
                 .map((image) => (
-                  <div key={image._key} className="w-full">
-                    <img
-                      src={urlFor(image).url()}
-                      alt="Image"
-                      className="rounded-xl w-full p-[1vw]"
-                    />
-                  </div>
+                  <Dialog key={image._key}>
+                    <DialogTrigger>
+                      <img
+                        src={urlFor(image).url()}
+                        alt="Image"
+                        className="rounded-[2vw] w-full p-[1vw]"
+                      />
+                    </DialogTrigger>
+                    <DialogContent className="bg-zinc-300 rounded-[2vw]">
+                      {" "}
+                      <DialogTitle hidden>
+                        Ein Bild aus der Bildergalerie
+                      </DialogTitle>
+                      {/* Hier vielleicht Bildbeschreibung? */}
+                      <img
+                        src={urlFor(image).url()}
+                        alt="Image"
+                        className="rounded-[2vw] w-full object-contain"
+                      />
+                    </DialogContent>
+                  </Dialog>
                 ))
                 .slice(0, 2)}
           </div>
