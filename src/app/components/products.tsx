@@ -15,7 +15,7 @@ export default function Products({ products }: { products: Product[] }) {
         {/* The white background with opacity */}
         <div className=" bg-opacity-15 rounded-full p-[1vw] m-[3vw]">
           <h1 className="text-black font-bold text-xl md:text-2xl lg:text-5xl">
-            Modelle
+            MODELLE
           </h1>
         </div>
       </div>
