@@ -4,6 +4,9 @@ import Footer from "./components/footer";
 import "./globals.css";
 import { SanityLive } from "@/sanity/live";
 import { Navbar } from "./components/navbar";
+import { Anton, Dancing_Script, Goldman } from "next/font/google";
+
+const goldman = Goldman({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className="flex flex-col min-h-screen">
+      <body className={goldman.className}>
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer></Footer>

@@ -36,7 +36,7 @@ export function BurgerMenu() {
           href="#products"
           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
         >
-          Fahrräder
+          Modelle
         </a>
         <a
           href="#gallery"

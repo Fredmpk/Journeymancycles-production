@@ -3,6 +3,7 @@ import { defineQuery } from "next-sanity";
 export const PRODUCTS_QUERY = defineQuery(`*[_type == "product"]{
     _id, 
     title,
+    font,
     mainImage{
     asset ->{
     url
@@ -15,6 +16,7 @@ export const PRODUCT_DETAIL_QUERY = defineQuery(
   `*[_type == "product" && _id == $id][0] {
       _id, 
     title,
+    font,
     mainImage{
     asset ->{
     url

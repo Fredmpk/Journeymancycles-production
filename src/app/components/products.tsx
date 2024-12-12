@@ -1,14 +1,21 @@
 import { urlFor } from "@/sanity/imageUrlBuilder";
 import { Product } from "@/sanity/types";
+import { Anton, Dancing_Script, Goldman } from "next/font/google";
+
+const anton = Anton({ subsets: ["latin"], weight: "400" });
+const dancingscript = Dancing_Script({ subsets: ["latin"], weight: "400" });
 
 export default function Products({ products }: { products: Product[] }) {
   return (
-    <div className="relative w-full h-full bg-cover bg-[url('/img/products-bg.png')]">
-      <div className="w-full h-full flex justify-center items-center p-4">
+    <div
+      className="relative w-full h-full bg-cover bg-zinc-200 p-[3vw] md:pt-[7vw]"
+      id="products"
+    >
+      <div className="w-full h-full flex justify-center items-center">
         {/* The white background with opacity */}
-        <div className="bg-white bg-opacity-15 rounded-full p-[1vw] m-[3vw]">
+        <div className=" bg-opacity-15 rounded-full p-[1vw] m-[3vw]">
           <h1 className="text-black font-bold text-xl md:text-2xl lg:text-5xl">
-            Die Modelle
+            Modelle
           </h1>
         </div>
       </div>
@@ -27,7 +34,15 @@ export default function Products({ products }: { products: Product[] }) {
                 className="w-full object-cover rounded-lg"
               />
             )}
-            <p className="absolute top-[12%] inset-0 flex justify-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+            <p
+              className={`absolute top-[12%] inset-0 flex justify-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl ${
+                product.font == "dancingscript"
+                  ? dancingscript.className
+                  : product.font == "anton"
+                    ? anton.className
+                    : ""
+              }`}
+            >
               {product.title}
             </p>
           </a>

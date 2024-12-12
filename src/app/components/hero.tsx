@@ -30,12 +30,12 @@ export function HeroSection({ mainVideo }: VideoProps) {
         <div className="max-w-xl mx-4 md:mx-8 text-black text-xl sm:text-2xl md:text-4xl lg:text-5xl text-left">
           <div>
             <p>
-              Take that for Good
+              take that for good
               <span className="italic text-zinc-600">s</span>
-              <span> -</span>
+              <span> - </span>
             </p>
           </div>
-          <p>langlebige Lastenräder</p>
+          <p>the best cargobikes </p>
         </div>
       </div>
     </div>

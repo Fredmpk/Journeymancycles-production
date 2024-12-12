@@ -88,6 +88,7 @@ export type Gallery = {
     hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
     format?: "portrait" | "landscape" | "square";
+    title?: string;
     _type: "image";
     _key: string;
   }>;
@@ -100,6 +101,7 @@ export type Product = {
   _updatedAt: string;
   _rev: string;
   title?: string;
+  font?: "goldman" | "dancingscript" | "anton";
   mainImage?: {
     asset?: {
       _ref: string;

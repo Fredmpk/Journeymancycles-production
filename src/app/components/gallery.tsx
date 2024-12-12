@@ -16,12 +16,16 @@ export default function GallerySection({ gallery }: { gallery: Gallery }) {
 
   return (
     <>
-      <div className="bg-[url('/img/gallery-bg.png')] bg-cover w-full">
-        <div className="w-full h-full flex justify-center items-center p-4">
+      <div
+        className="bg-zinc-200 bg-cover w-full p-[1vw] md:pt-[7vw]"
+        id="gallery"
+      >
+        <div className="w-full h-full flex justify-center items-center">
           {/* The white background with opacity */}
-          <div className="bg-white bg-opacity-15 rounded-full p-[1vw] m-[3vw]">
+          <div className="bg-opacity-15 rounded-full p-[1vw] m-[3vw]">
             <h1 className="text-black font-bold text-xl md:text-2xl lg:text-5xl">
-              Galerie
+              GALERIE
+              {/* Abstand soll links und rechts gleich sein */}
             </h1>
           </div>
         </div>
@@ -39,12 +43,12 @@ export default function GallerySection({ gallery }: { gallery: Gallery }) {
                         className="rounded-[2vw] w-full p-[1vw]"
                       />
                     </DialogTrigger>
-                    <DialogContent className="bg-zinc-300 rounded-[2vw]">
-                      <DialogTitle>Bildbeschreibung oder Titel?</DialogTitle>{" "}
+                    <DialogContent className="bg-zinc-300 rounded-[1vw] max-w-[75vw] 2xl:max-w-[60vw] ">
+                      <DialogTitle>{image.title}</DialogTitle>{" "}
                       <img
                         src={urlFor(image).url()}
                         alt="Image"
-                        className="rounded-[2vw] w-full object-contain"
+                        className="rounded-[vw]  object-contain p-[1vw] 2xl:max-h[60vh] 2xl:p-1"
                       />
                     </DialogContent>
                   </Dialog>
@@ -64,17 +68,17 @@ export default function GallerySection({ gallery }: { gallery: Gallery }) {
                         className="rounded-[2vw] w-full p-[1vw]"
                       />
                     </DialogTrigger>
-                    <DialogContent className="bg-zinc-300 rounded-[2vw]">
+                    <DialogContent className="bg-zinc-300 rounded-[2vw] lg:max-h-[90vh] lg:max-w-[40vw] 2xl:max-w-[35vw]">
                       {" "}
-                      <DialogTitle hidden>
-                        Ein Bild aus der Bildergalerie
-                      </DialogTitle>
+                      <DialogTitle>{image.title}</DialogTitle>
                       {/* Hier vielleicht Bildbeschreibung? */}
-                      <img
-                        src={urlFor(image).url()}
-                        alt="Image"
-                        className="rounded-[2vw] w-full object-contain"
-                      />
+                      <div className="w-full flex justify-center">
+                        <img
+                          src={urlFor(image).url()}
+                          alt="Image"
+                          className="rounded-[1vw] max-h-[80vh] object-contain"
+                        />
+                      </div>
                     </DialogContent>
                   </Dialog>
                 ))

@@ -29,16 +29,16 @@ export default async function ProductDetail({
 
   return (
     <div
-      style={{
-        backgroundImage: product.bgImage
-          ? `url(${urlFor(product.bgImage).url()})`
-          : "none",
+      // style={{
+      //   backgroundImage: product.bgImage
+      //     ? `url(${urlFor(product.bgImage).url()})`
+      //     : "none",
 
-        backgroundPosition: "center",
-      }}
-      className="pt-[11vw] md:pt-[7vw] flex flex-col justify-center items-center bg-cover"
+      //   backgroundPosition: "center",
+      // }}
+      className="pt-[11vw] md:pt-[7vw] flex flex-col justify-center items-center bg-cover bg-zinc-200"
     >
-      <div className="bg-zinc-400 bg-opacity-75 rounded-full pt-[1vw] m-[3vw] ">
+      <div className=" bg-opacity-75 rounded-full pt-[1vw] m-[3vw] ">
         <h1 className="text-black font-bold text-3xl md:text-5xl lg:text-7xl px-[2vw]">
           {product.title}
         </h1>
