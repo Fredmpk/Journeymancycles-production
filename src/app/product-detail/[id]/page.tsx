@@ -36,7 +36,7 @@ export default async function ProductDetail({
 
       //   backgroundPosition: "center",
       // }}
-      className="pt-[11vw] md:pt-[7vw] flex flex-col justify-center items-center bg-cover bg-zinc-200"
+      className="pt-[11vw] md:pt-[7vw] lg:pt-[5vw] flex flex-col justify-center items-center bg-cover bg-zinc-200"
     >
       <div className=" bg-opacity-75 rounded-full pt-[1vw] m-[3vw] ">
         <h1 className="text-black font-bold text-3xl md:text-5xl lg:text-7xl px-[2vw]">

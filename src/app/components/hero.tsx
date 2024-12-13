@@ -21,7 +21,7 @@ export function HeroSection({ mainVideo }: VideoProps) {
         muted
         loop
         playsInline
-        className="w-full max-w-full pt-[11vw] md:pt-[7vw]"
+        className="w-full max-w-full pt-[11vw] md:pt-[7vw] lg:pt-[5vw]"
         src={mainVideo.asset.url}
       >
         Your browser does not support the video tag.
