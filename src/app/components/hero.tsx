@@ -26,7 +26,7 @@ export function HeroSection({ mainVideo }: VideoProps) {
       >
         Your browser does not support the video tag.
       </video>
-      <div className="absolute top-3/4 w-full h-full px-4 md:px-8 lg:px-16">
+      <div className="absolute top-3/4 w-full md:px-8 lg:px-16">
         <div className="max-w-xl mx-4 md:mx-8 text-black text-xl sm:text-2xl md:text-4xl lg:text-5xl text-left">
           <div>
             <p>

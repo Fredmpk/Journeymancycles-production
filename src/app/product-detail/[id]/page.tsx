@@ -51,36 +51,13 @@ export default async function ProductDetail({
               loop: true,
             }}
           >
-            {/* 
-              eventuell mit trigger und extra bilderanzeige in groß?
-              <Dialog>
-                <DialogTrigger>
-                  <CarouselItem>
-                    {" "}
-                    <img
-                      src={urlFor(product.mainImage).url()}
-                      alt="Image"
-                      className="w-full object-contain rounded-2xl p-[3vw]   max-h-[90vh] lg:max-h-[70vh]"
-                    />
-                  </CarouselItem>
-                </DialogTrigger>
-                <DialogContent className="rounded-[1vw] max-w-[75vw] 2xl:max-w-[60vw] ">
-                  <DialogTitle hidden>{product.title}</DialogTitle>{" "}
-                  <img
-                    src={urlFor(product.mainImage).url()}
-                    alt="Image"
-                    className="rounded-[vw]  object-contain p-[1vw] 2xl:max-h[60vh] 2xl:p-1"
-                  />
-                </DialogContent>
-              </Dialog> */}
-
             <CarouselContent>
               <CarouselItem>
                 {" "}
                 <img
                   src={urlFor(product.mainImage).url()}
                   alt="Image"
-                  className="w-full object-contain rounded-2xl p-[3vw]   max-h-[90vh] lg:max-h-[70vh]"
+                  className="w-full object-contain rounded-2xl p-[3vw] xl:p-[1vw]  max-h-[90vh] lg:max-h-[70vh]"
                 />
               </CarouselItem>
               {product.gallery &&
@@ -89,7 +66,7 @@ export default async function ProductDetail({
                     <img
                       src={urlFor(image).url()}
                       alt="Image"
-                      className="w-full object-contain rounded-2xl p-[3vw] xl:p-0  max-h-[90vh] lg:max-h-[70vh]"
+                      className="w-full object-contain rounded-2xl p-[3vw] xl:p-[1vw]  max-h-[90vh] lg:max-h-[70vh]"
                     />
                   </CarouselItem>
                 ))}

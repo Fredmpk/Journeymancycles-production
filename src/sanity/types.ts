@@ -101,6 +101,7 @@ export type Product = {
   _updatedAt: string;
   _rev: string;
   title?: string;
+  sortOrder?: number;
   font?: "goldman" | "dancingscript" | "anton";
   mainImage?: {
     asset?: {

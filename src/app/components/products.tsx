@@ -2,10 +2,11 @@ import { urlFor } from "@/sanity/imageUrlBuilder";
 import { Product } from "@/sanity/types";
 import { Anton, Dancing_Script, Goldman } from "next/font/google";
 
+
 const anton = Anton({ subsets: ["latin"], weight: "400" });
 const dancingscript = Dancing_Script({ subsets: ["latin"], weight: "400" });
 
-export default function Products({ products }: { products: Product[] }) {
+export default function ProductsSection({ products }: { products: Product[] }) {
   return (
     <div
       className="relative w-full h-full bg-cover bg-zinc-200 p-[3vw] md:pt-[7vw]"
@@ -45,6 +46,7 @@ export default function Products({ products }: { products: Product[] }) {
             >
               {product.title}
             </p>
+            <div></div>
           </a>
         ))}
       </div>
