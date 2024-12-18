@@ -58,8 +58,35 @@ export type Legal = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  impressum?: string;
+  name?: string;
+  street?: string;
+  city?: string;
+  tel?: string;
+  mail?: string;
   privacy?: string;
+};
+
+export type Friends = {
+  _id: string;
+  _type: "friends";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  sortOrder?: number;
+  Icon?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  link?: string;
+  description?: string;
 };
 
 export type About = {
@@ -237,5 +264,5 @@ export type SanityAssetSourceData = {
   url?: string;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | Geopoint | Slug | Legal | About | Gallery | Product | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityImageMetadata | Hero | SanityFileAsset | SanityAssetSourceData;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | Geopoint | Slug | Legal | Friends | About | Gallery | Product | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityImageMetadata | Hero | SanityFileAsset | SanityAssetSourceData;
 export declare const internalGroqTypeReferenceTo: unique symbol;

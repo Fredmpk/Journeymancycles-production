@@ -1,14 +1,15 @@
+import { Legal } from "@/sanity/types";
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ impressum }: { impressum: Legal }) {
   return (
     <div className="flex justify-between p-[2vw] bg-zinc-50">
-      <div>
-        <p>Erdmann Kunze</p>
-        <p>Herrmann-Meyer-Straße</p>
-        <p>6666b Leipzif</p>
-        <p>email@email.de</p>
-        <p>0133333 4444567</p>
+      <div className="flex-col">
+        <div>{impressum?.name}</div>
+        <div>{impressum?.street}</div>
+        <div>{impressum?.city}</div>
+        <div>{impressum?.tel}</div>
+        <div>{impressum?.mail}</div>
       </div>
       <div>
         <a
@@ -17,7 +18,7 @@ export default function Footer() {
           rel="noopener noreferrer"
         >
           <img
-            src="/img/insta-preview.png"
+            src="/img/insta-preview-3.png"
             alt="Instagram"
             className="w-[10vw]"
           />

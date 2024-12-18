@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={goldman.className}>
         <Navbar />
         <main className="flex-grow">{children}</main>
-        <Footer />
+      
         <SanityLive />
       </body>
     </html>

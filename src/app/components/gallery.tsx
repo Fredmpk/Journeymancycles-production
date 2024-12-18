@@ -12,8 +12,6 @@ import {
 } from "@/components/ui/dialog";
 
 export default function GallerySection({ gallery }: { gallery: Gallery }) {
-  console.log(gallery);
-
   return (
     <>
       <div

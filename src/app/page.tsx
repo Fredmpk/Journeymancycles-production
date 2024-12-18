@@ -3,7 +3,12 @@ import About from "./components/about";
 import Footer from "./components/footer";
 import "./globals.css";
 import { sanityFetch } from "@/sanity/live";
-import { GALLERY_QUERY, HERO_QUERY, PRODUCTS_QUERY } from "@/sanity/queries";
+import {
+  GALLERY_QUERY,
+  HERO_QUERY,
+  IMPRESSUM_QUERY,
+  PRODUCTS_QUERY,
+} from "@/sanity/queries";
 import { HeroSection } from "./components/hero";
 import ProductsSection from "./components/products";
 import AwardSection from "./components/award";
@@ -15,6 +20,8 @@ export default async function Home() {
 
   const { data: gallery } = await sanityFetch({ query: GALLERY_QUERY });
 
+  const { data: impressum } = await sanityFetch({ query: IMPRESSUM_QUERY });
+
   return (
     <>
       <HeroSection mainVideo={hero?.mainVideo || null}></HeroSection>
@@ -22,6 +29,7 @@ export default async function Home() {
       <ProductsSection products={products || null}></ProductsSection>
       <Gallery gallery={gallery || null}></Gallery>
       <About></About>
+      <Footer impressum={impressum || null} />
     </>
   );
 }

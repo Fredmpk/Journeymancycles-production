@@ -60,3 +60,16 @@ export const GALLERY_QUERY = defineQuery(`*[_type == "gallery"][0]{
         }
       }
     }`);
+
+export const IMPRESSUM_QUERY = defineQuery(`*[_type == "legal"][0]{
+  _id,
+  name,
+  street,
+  city,
+  tel,
+  mail,
+  }`);
+export const PRIVACY_QUERY = defineQuery(`*[_type == "legal"][0]{
+  _id,
+
+  privacy}`);
