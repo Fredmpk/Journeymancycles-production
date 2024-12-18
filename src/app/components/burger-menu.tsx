@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 export function BurgerMenu() {
@@ -32,25 +33,25 @@ export function BurgerMenu() {
           isOpen ? "block" : "hidden"
         } absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10`}
       >
-        <a
-          href="#products"
+        <Link
+          href="/#products"
           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
         >
           Modelle
-        </a>
+        </Link>
         <a
-          href="#gallery"
+          href="/#gallery"
           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
         >
           Galerie
         </a>
 
-        <a
-          href="#about"
+        <Link
+          href="/#about"
           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
         >
           About
-        </a>
+        </Link>
         {/* <a
           href="#contact"
           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
