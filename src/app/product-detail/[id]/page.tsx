@@ -16,12 +16,20 @@ import {
 export default async function ProductDetail({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const product: Product = await sanityFetch({
+  const resolvedParams = await params;
+  console.log("Resolved Params:", resolvedParams);
+
+  // The params somehow returned a Promise, i donno why, but if i await it like this it works
+  const data = await sanityFetch({
     query: PRODUCT_DETAIL_QUERY,
-    params: { id: params.id },
-  }).then((result) => result.data); // it returns the part of an array, product.data would fit the type Product
+    params: { id: resolvedParams.id },
+  });
+
+  const product: Product = data.data;
+
+  // .then((result) => result.data); // it returns the part of an array, product.data would fit the type Product
 
   if (!product) {
     return <div>Product not found</div>;
