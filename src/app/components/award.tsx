@@ -23,7 +23,7 @@ export default function AwardSection() {
       </div>
       <div className="flex flex-row justify-between items-center p-[2vw]">
         <img
-          src="img/award.jpeg"
+          src="img/award-grey.jpg"
           alt="EIn Bild des Preises"
           className="w-1/4 rounded-full"
         />
