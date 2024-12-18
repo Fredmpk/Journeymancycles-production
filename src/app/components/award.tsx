@@ -5,20 +5,24 @@ export default function AwardSection() {
     <div className="bg-zinc-100">
       <div className="relative flex flex-col items-center">
         <FaAward className="absolute right-[5vw] top-[9vw] sm:top-[5vw] text-3xl sm:text-6xl" />
-        <p className="p-[3vw] md:text-2xl lg:text-4xl">
-          {" "}
-          2023 "Best Cargo Bike" Award @
-        </p>
+        <div className="p-[3vw] md:text-2xl lg:text-4xl flex gap-[1vw]">
+          <p className="italic"> Best Cargo Bike </p>
+          <p> Award @</p>
+        </div>
         <a
           href="https://www.bespoked.cc/post/bespoked-2023-award-winners"
           target="_blank"
           rel="noopener noreferrer"
+          className="flex gap-[2vw] items-center"
         >
           <img
-            src="/img/bespoked.png"
+            src="/img/BESPOKED.png"
             alt="Bespoked Messe"
             className="w-[30vw]"
           />
+          <p className="text-lg sm:text-2xl md:text-3xl lg:text-5xl xl:text-7xl">
+            2023
+          </p>
         </a>
       </div>
       <div className="flex flex-row justify-between items-center p-[2vw]">
@@ -49,7 +53,9 @@ export default function AwardSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p>Video-Interview auf der Bespoked Messe ab 5:33</p>
+          <p className="text-xs md:text-lg">
+            Video-Interview auf der Bespoked Messe ab 5:33
+          </p>
           <IoArrowRedoCircle />
         </a>
       </div>
