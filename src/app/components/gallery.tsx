@@ -41,12 +41,12 @@ export default function GallerySection({ gallery }: { gallery: Gallery }) {
                         className="rounded-[2vw] w-full p-[1vw]"
                       />
                     </DialogTrigger>
-                    <DialogContent className="bg-zinc-300 rounded-[1vw] max-w-[75vw] 2xl:max-w-[60vw] ">
+                    <DialogContent className="bg-zinc-300 rounded-[1vw] max-w-[95vw] md:max-w-[85vw] xl:max-w-[70vw] 2xl:max-w-[60vw] lg:max-w-[80vw]lg:flex lg:justify-center">
                       <DialogTitle>{image.title}</DialogTitle>{" "}
                       <img
                         src={urlFor(image).url()}
                         alt="Image"
-                        className="rounded-[vw]  object-contain p-[1vw] 2xl:max-h[60vh] 2xl:p-1"
+                        className="rounded-[2vw]  object-contain  2xl:max-h[60vh] max-h-[90vh] xl:p-2 text-center"
                       />
                     </DialogContent>
                   </Dialog>
