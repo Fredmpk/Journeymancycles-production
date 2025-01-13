@@ -4,6 +4,7 @@ import Footer from "./components/footer";
 import "./globals.css";
 import { sanityFetch } from "@/sanity/live";
 import {
+  FRIENDS_QUERY,
   GALLERY_QUERY,
   HERO_QUERY,
   IMPRESSUM_QUERY,
@@ -12,6 +13,7 @@ import {
 import { HeroSection } from "./components/hero";
 import ProductsSection from "./components/products";
 import AwardSection from "./components/award";
+import FriendSection from "./components/friends";
 
 export default async function Home() {
   const { data: hero } = await sanityFetch({ query: HERO_QUERY });
@@ -22,6 +24,8 @@ export default async function Home() {
 
   const { data: impressum } = await sanityFetch({ query: IMPRESSUM_QUERY });
 
+  const { data: friends } = await sanityFetch({ query: FRIENDS_QUERY });
+
   return (
     <>
       <HeroSection mainVideo={hero?.mainVideo || null}></HeroSection>
@@ -29,6 +33,7 @@ export default async function Home() {
       <ProductsSection products={products || null}></ProductsSection>
       <Gallery gallery={gallery || null}></Gallery>
       <About></About>
+      <FriendSection friends={friends || null}></FriendSection>
       <Footer impressum={impressum || null} />
     </>
   );

@@ -80,3 +80,12 @@ title,
 subtitle,
 description,
 }`);
+
+export const FRIENDS_QUERY =
+  defineQuery(`*[_type == "friends"] | order(sortOrder asc){
+  _id, 
+  title,
+  icon,
+  link,
+  description,
+  }`);

@@ -11,7 +11,7 @@ export default function Footer({ impressum }: { impressum: Legal }) {
         <div>{impressum?.tel}</div>
         <div>{impressum?.mail}</div>
       </div>
-      <div>
+      <div className="absolute left-1/2 -translate-x-1/2 translate-y-1/2 md:translate-y-0">
         <a
           href="https://www.instagram.com/journeyman.cycles/"
           target="_blank"

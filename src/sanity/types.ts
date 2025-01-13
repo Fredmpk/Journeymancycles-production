@@ -60,7 +60,24 @@ export type Reisegewerbe = {
   _rev: string;
   title?: string;
   subtitle?: string;
-  description?: string;
+  description?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
 };
 
 export type Legal = {
@@ -74,7 +91,24 @@ export type Legal = {
   city?: string;
   tel?: string;
   mail?: string;
-  privacy?: string;
+  privacy?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
 };
 
 export type Friends = {
@@ -85,7 +119,7 @@ export type Friends = {
   _rev: string;
   title?: string;
   sortOrder?: number;
-  Icon?: {
+  icon?: {
     asset?: {
       _ref: string;
       _type: "reference";
