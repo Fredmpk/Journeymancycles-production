@@ -1,5 +1,12 @@
 import { FaAward } from "react-icons/fa";
 import { IoArrowRedoCircle } from "react-icons/io5";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+});
 export default function AwardSection() {
   return (
     <div className="bg-zinc-100">
@@ -37,12 +44,21 @@ export default function AwardSection() {
           rel="noopener noreferrer"
         >
           <img
-            className=" w-[70vw] sm:w-[60vw] rounded-xl -rotate-2"
+            className=" w-[70vw] sm:w-[60vw] rounded-xl -rotate-2 hidden md:block"
             src="/img/review-award.png"
             alt="Best Cargo Bike - Journeyman Cycles   
-          Judged by Jon from TwoTone Consulting and Bregan from Crank Communcations – Very versatile loading platform, capable of carrying very long cargo. So ultimately, one is for the most utility, you need to carry something super long, long timber, long pipes, stuff like that. Has a cool steering approach, different than just the typical ball joint bearing. And also has extra ways to attach things on the bottom of the bike.   
-          Runners Up – Fahrradbau Stolz, Drust Cycles, Veloheld"
+          Judged by Jon from TwoTone Consulting and Bregan from Crank Communcations – Very versatile loading platform, capable of carrying very long cargo. So ultimately, one is for the most utility, you need to carry something super long, long timber, long pipes, stuff like that. Has a cool steering approach, different than just the typical ball joint bearing. And also has extra ways to attach things on the bottom of the bike."
           />
+          <div
+            className={`-rotate-2 italic p-[2vw] md:hidden ${inter.className}`}
+          >
+            "Very versatile loading platform, capable of carrying very long
+            cargo. So ultimately, one is for the most utility, you need to carry
+            something super long, long timber, long pipes, stuff like that. Has
+            a cool steering approach, different than just the typical ball joint
+            bearing. And also has extra ways to attach things on the bottom of
+            the bike."{" "}
+          </div>
         </a>
       </div>
       <div className="flex justify-end">
