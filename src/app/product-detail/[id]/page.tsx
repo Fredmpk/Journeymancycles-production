@@ -18,6 +18,8 @@ export default async function ProductDetail({
 }: {
   params: Promise<{ id: string }>;
 }) {
+  console.log("promise?", params);
+
   const resolvedParams = await params;
   console.log("Resolved Params:", resolvedParams);
 

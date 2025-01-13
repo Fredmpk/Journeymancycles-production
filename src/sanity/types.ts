@@ -52,6 +52,17 @@ export type Slug = {
   source?: string;
 };
 
+export type Reisegewerbe = {
+  _id: string;
+  _type: "reisegewerbe";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  subtitle?: string;
+  description?: string;
+};
+
 export type Legal = {
   _id: string;
   _type: "legal";
@@ -264,5 +275,5 @@ export type SanityAssetSourceData = {
   url?: string;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | Geopoint | Slug | Legal | Friends | About | Gallery | Product | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityImageMetadata | Hero | SanityFileAsset | SanityAssetSourceData;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | Geopoint | Slug | Reisegewerbe | Legal | Friends | About | Gallery | Product | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityImageMetadata | Hero | SanityFileAsset | SanityAssetSourceData;
 export declare const internalGroqTypeReferenceTo: unique symbol;

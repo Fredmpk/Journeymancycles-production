@@ -73,3 +73,10 @@ export const PRIVACY_QUERY = defineQuery(`*[_type == "legal"][0]{
   _id,
 
   privacy}`);
+
+export const REISEGEWERBE_QUERY = defineQuery(`*[_type == "reisegewerbe"][0]{
+  _id,
+title,
+subtitle,
+description,
+}`);
