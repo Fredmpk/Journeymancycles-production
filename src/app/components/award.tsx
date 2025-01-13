@@ -11,7 +11,7 @@ export default function AwardSection() {
   return (
     <div className="bg-zinc-100">
       <div className="relative flex flex-col items-center">
-        <FaAward className="absolute right-[5vw] top-[9vw] sm:top-[5vw] text-3xl sm:text-6xl" />
+        <FaAward className="absolute right-[5vw] top-[9vw] sm:top-[5vw] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl" />
         <div className="p-[3vw] md:text-2xl lg:text-4xl flex gap-[1vw]">
           <p className="italic"> Best Cargo Bike </p>
           <p> Award @</p>
@@ -50,14 +50,13 @@ export default function AwardSection() {
           Judged by Jon from TwoTone Consulting and Bregan from Crank Communcations – Very versatile loading platform, capable of carrying very long cargo. So ultimately, one is for the most utility, you need to carry something super long, long timber, long pipes, stuff like that. Has a cool steering approach, different than just the typical ball joint bearing. And also has extra ways to attach things on the bottom of the bike."
           />
           <div
-            className={`-rotate-2 italic p-[2vw] md:hidden ${inter.className}`}
+            className={`-rotate-2 italic px-[6vw] py-[2vw] md:hidden ${inter.className}`}
           >
             "Very versatile loading platform, capable of carrying very long
             cargo. So ultimately, one is for the most utility, you need to carry
             something super long, long timber, long pipes, stuff like that. Has
             a cool steering approach, different than just the typical ball joint
-            bearing. And also has extra ways to attach things on the bottom of
-            the bike."{" "}
+            bearing."{" "}
           </div>
         </a>
       </div>
