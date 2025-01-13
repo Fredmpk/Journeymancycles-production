@@ -32,7 +32,7 @@ const components: PortableTextComponents = {
   },
 };
 
-export default async function ({ content }: { content: PortableTextBlock[] }) {
+export default async function ReisegewerbePage() {
   const { data: reisegewerbe } = await sanityFetch({
     query: REISEGEWERBE_QUERY,
   });

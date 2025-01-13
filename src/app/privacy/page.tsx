@@ -1,7 +1,6 @@
 import { sanityFetch } from "@/sanity/live";
 import { PRIVACY_QUERY } from "@/sanity/queries";
 import { PortableText, PortableTextComponents } from "@portabletext/react";
-import { PortableTextBlock } from "@portabletext/types";
 
 const components: PortableTextComponents = {
   block: {
@@ -32,7 +31,7 @@ const components: PortableTextComponents = {
   },
 };
 
-export default async function ({ content }: { content: PortableTextBlock[] }) {
+export default async function PrivacyPage() {
   const { data: legal } = await sanityFetch({
     query: PRIVACY_QUERY,
   });
