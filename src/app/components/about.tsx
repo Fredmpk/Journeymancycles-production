@@ -46,7 +46,7 @@ export default function AboutSection({ about }: { about: About }) {
         ></iframe>
       </div>
 
-      <div>
+      <div className="p-[4vw]">
         <PortableText value={about.content || []} components={components} />
       </div>
     </div>
