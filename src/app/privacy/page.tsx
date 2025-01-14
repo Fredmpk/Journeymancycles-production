@@ -7,23 +7,23 @@ const components: PortableTextComponents = {
   block: {
     normal: ({ children }) => {
       if (!children || (Array.isArray(children) && children.length === 0)) {
-        return <div className="my-4" />;
+        return <div className="py-4" />;
       }
-      return <p className="mb-4">{children}</p>;
+      return <p className="pb-4">{children}</p>;
     },
-    h1: ({ children }) => <h1 className="text-2xl mb-4">{children}</h1>,
+    h1: ({ children }) => <h1 className="text-2xl pb-4">{children}</h1>,
   },
   list: {
     bullet: ({ children }) => (
-      <ul className="list-disc ml-6 mb-4">{children}</ul>
+      <ul className="list-disc ml-6 pb-4">{children}</ul>
     ),
     number: ({ children }) => (
-      <ol className="list-decimal ml-6 mb-4">{children}</ol>
+      <ol className="list-decimal ml-6 pb-4">{children}</ol>
     ),
   },
   listItem: {
-    bullet: ({ children }) => <li className="mb-2">{children}</li>,
-    number: ({ children }) => <li className="mb-2">{children}</li>,
+    bullet: ({ children }) => <li className="pb-2">{children}</li>,
+    number: ({ children }) => <li className="pb-2">{children}</li>,
   },
   marks: {
     strong: ({ children }) => <span className="font-bold">{children}</span>,

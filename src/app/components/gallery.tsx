@@ -18,16 +18,11 @@ export default function GallerySection({ gallery }: { gallery: Gallery }) {
         className="bg-zinc-300 bg-cover w-full pt-[9vw] md:pt-[7vw]"
         id="gallery"
       >
-        <div className="w-full h-full flex justify-center items-center">
-          {/* The white background with opacity */}
-          <div className="bg-opacity-15 rounded-full p-[1vw] m-[3vw]">
-            <h1 className="text-black font-bold text-xl md:text-2xl lg:text-5xl">
-              GALERIE
-              {/* Abstand soll links und rechts gleich sein */}
-            </h1>
-          </div>
-        </div>
-        <div className="flex flex-row">
+        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center">
+          GALERIE
+        </h1>
+
+        <div className="flex flex-row pt-[3vw]">
           <div className="flex flex-col w-[55%]">
             {gallery.images &&
               gallery.images

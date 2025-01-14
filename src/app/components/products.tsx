@@ -11,17 +11,12 @@ const dancingscript = Dancing_Script({
 export default function ProductsSection({ products }: { products: Product[] }) {
   return (
     <div
-      className="relative w-full h-full bg-cover bg-zinc-200 pt-[9vw] md:pt-[7vw]"
+      className="relative w-full h-full bg-zinc-200 pt-[9vw] md:pt-[7vw]"
       id="products"
     >
-      <div className="w-full h-full flex justify-center items-center">
-        {/* The white background with opacity */}
-        <div className=" bg-opacity-15 rounded-full p-[1vw] m-[3vw]">
-          <h1 className="text-black font-bold text-xl md:text-2xl lg:text-5xl">
-            MODELLE
-          </h1>
-        </div>
-      </div>
+      <h1 className=" font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center">
+        MODELLE
+      </h1>
 
       <div className="flex flex-col ">
         {products.map((product) => (
