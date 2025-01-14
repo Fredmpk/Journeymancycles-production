@@ -3,7 +3,7 @@ import { Friends } from "@/sanity/types";
 
 export default function FriendSection({ friends }: { friends: Friends[] }) {
   return (
-    <div className="bg-zinc-100">
+    <div className="bg-zinc-100" id="friends">
       <h1 className="text-black font-bold text-xl md:text-2xl lg:text-5xl text-center p-[2vw]">
         FRIENDS
       </h1>

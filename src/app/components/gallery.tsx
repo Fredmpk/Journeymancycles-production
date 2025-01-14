@@ -15,7 +15,7 @@ export default function GallerySection({ gallery }: { gallery: Gallery }) {
   return (
     <>
       <div
-        className="bg-zinc-300 bg-cover w-full p-[1vw] md:pt-[7vw]"
+        className="bg-zinc-300 bg-cover w-full pt-[9vw] md:pt-[7vw]"
         id="gallery"
       >
         <div className="w-full h-full flex justify-center items-center">

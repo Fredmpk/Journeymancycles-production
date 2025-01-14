@@ -11,7 +11,7 @@ const dancingscript = Dancing_Script({
 export default function ProductsSection({ products }: { products: Product[] }) {
   return (
     <div
-      className="relative w-full h-full bg-cover bg-zinc-200 p-[3vw] md:pt-[7vw]"
+      className="relative w-full h-full bg-cover bg-zinc-200 pt-[9vw] md:pt-[7vw]"
       id="products"
     >
       <div className="w-full h-full flex justify-center items-center">

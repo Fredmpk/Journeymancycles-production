@@ -1,5 +1,4 @@
 import GallerySection from "./components/gallery";
-import About from "./components/about";
 import Footer from "./components/footer";
 import "./globals.css";
 import { sanityFetch } from "@/sanity/live";
@@ -29,7 +28,7 @@ export default async function Home() {
   const { data: friends } = await sanityFetch({ query: FRIENDS_QUERY });
 
   const { data: about } = await sanityFetch({ query: ABOUT_QUERY });
-
+  console.log("About data:", about);
   return (
     <>
       <HeroSection mainVideo={hero?.mainVideo || null}></HeroSection>

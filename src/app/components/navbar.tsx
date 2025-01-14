@@ -42,7 +42,7 @@ export function Navbar() {
             <Link href="/#about">About</Link>
           </li>
           {/* <li>
-            <a href="#">kontakt</a>
+            <a href="#friends">Friends</a>
           </li> */}
         </ul>
         <BurgerMenu />
