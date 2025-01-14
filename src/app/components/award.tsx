@@ -13,7 +13,7 @@ export default function AwardSection() {
       <div className="relative flex flex-col items-center">
         <FaAward className="absolute right-[5vw] top-[9vw] sm:top-[5vw] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl" />
         <div className="p-[3vw] md:text-2xl lg:text-4xl flex gap-[1vw]">
-          <p className="italic"> Best Cargo Bike </p>
+          <p> Best Cargo Bike </p>
           <p> Award @</p>
         </div>
         <a
