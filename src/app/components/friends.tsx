@@ -3,11 +3,11 @@ import { Friends } from "@/sanity/types";
 
 export default function FriendSection({ friends }: { friends: Friends[] }) {
   return (
-    <main>
-      <h1 className="text-black font-bold text-xl md:text-2xl lg:text-5xl text-center">
+    <div className="bg-zinc-100">
+      <h1 className="text-black font-bold text-xl md:text-2xl lg:text-5xl text-center p-[2vw]">
         FRIENDS
       </h1>
-      <div className="flex sm:flex-row flex-wrap justify-between">
+      <div className="flex sm:flex-row flex-wrap justify-between m-[2vw]">
         {friends.map((friend) => (
           <a
             key={friend._id}
@@ -26,6 +26,6 @@ export default function FriendSection({ friends }: { friends: Friends[] }) {
           </a>
         ))}
       </div>
-    </main>
+    </div>
   );
 }

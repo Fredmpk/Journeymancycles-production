@@ -89,3 +89,9 @@ export const FRIENDS_QUERY =
   link,
   description,
   }`);
+
+export const ABOUT_QUERY = defineQuery(`*[_type == "about"][0] {
+    _id,
+    embedVideo,
+    content,
+    }`);

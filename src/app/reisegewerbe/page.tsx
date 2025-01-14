@@ -1,7 +1,8 @@
 import { sanityFetch } from "@/sanity/live";
-import { REISEGEWERBE_QUERY } from "@/sanity/queries";
+import { IMPRESSUM_QUERY, REISEGEWERBE_QUERY } from "@/sanity/queries";
 import { PortableText, PortableTextComponents } from "@portabletext/react";
 import { PortableTextBlock } from "@portabletext/types";
+import Footer from "../components/footer";
 
 const components: PortableTextComponents = {
   block: {
@@ -37,6 +38,7 @@ export default async function ReisegewerbePage() {
     query: REISEGEWERBE_QUERY,
   });
 
+  const { data: impressum } = await sanityFetch({ query: IMPRESSUM_QUERY });
   return (
     <div className="">
       <h1 className="pt-[13vw] md:pt-[9vw] lg:pt-[7vw] p-[1vw] font-bold text-xl md:text-2xl lg:text-5xl text-center">
@@ -51,6 +53,7 @@ export default async function ReisegewerbePage() {
           components={components}
         />
       </div>
+      <Footer impressum={impressum} />
     </div>
   );
 }
