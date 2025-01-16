@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 export function Navbar() {
   return (
     <div className="fixed w-full bg-white opacity-90 shadow-md z-50 ">
-      <nav className="flex items-center justify-between align-items text-lg md:text-2xl tracking-wide h-16 sm:h-20 px-3 max-w-screen">
+      <nav className="flex items-center justify-between align-items text-lg md:text-2xl tracking-wide h-16 sm:h-20 px-3 max-w-screen overflow-hidden">
         <a
           href="https://www.instagram.com/journeyman.cycles/"
           target="_blank"
