@@ -31,7 +31,7 @@ export function BurgerMenu() {
         id="myDropdown"
         className={`${
           isOpen ? "block" : "hidden"
-        } absolute right-0 mt-2 bg-white rounded-md shadow-lg py-1 z-10`}
+        } absolute right-0 mt-2 bg-white rounded-md shadow-lg py-1 z-10 w-1/3`}
       >
         <Link
           href="/#products"
