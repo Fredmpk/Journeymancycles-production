@@ -18,13 +18,13 @@ export function Navbar() {
 
         <Link
           href="/"
-          className="absolute left-1/2 transform -translate-x-1/2 aspect-square  h-10 sm:h-12"
+          className="absolute left-1/2 transform -translate-x-1/2 aspect-square  h-10 sm:h-12 overflow-hidden"
         >
           <img src="/img/erdmannlogo.png"></img>
         </Link>
 
         <ul
-          className="items-center gap-4 md:gap-9 hidden lg:flex"
+          className="items-center gap-4 lg:gap-9 hidden md:flex"
           id="navbar__right"
         >
           <li>

@@ -10,7 +10,7 @@ export function BurgerMenu() {
   };
 
   return (
-    <div className="lg:hidden" id="burger-menu">
+    <div className="md:hidden" id="burger-menu">
       <button onClick={toggleMenu}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ export function BurgerMenu() {
         id="myDropdown"
         className={`${
           isOpen ? "block" : "hidden"
-        } absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10`}
+        } absolute right-0 mt-2 bg-white rounded-md shadow-lg py-1 z-10`}
       >
         <Link
           href="/#products"
