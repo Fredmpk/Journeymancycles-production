@@ -12,6 +12,10 @@ const goldman = Goldman({ subsets: ["latin"], weight: "400" });
 export const metadata: Metadata = {
   title: "Journeyman Cycles",
   description: "Your local Cargo bike manufacturer",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
 };
 
 export default async function RootLayout({
