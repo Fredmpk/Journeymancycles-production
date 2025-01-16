@@ -38,10 +38,9 @@ export default async function ReisegewerbePage() {
     query: REISEGEWERBE_QUERY,
   });
 
-  const { data: impressum } = await sanityFetch({ query: IMPRESSUM_QUERY });
   return (
     <div className="">
-      <h1 className="pt-[13vw] md:pt-[9vw] lg:pt-[7vw] p-[1vw] font-bold text-xl md:text-2xl lg:text-5xl text-center">
+      <h1 className="pt-16 sm:pt-20 p-[1vw] font-bold text-xl md:text-2xl lg:text-5xl text-center">
         {reisegewerbe.title}
       </h1>
       <h2 className="italic text-lg md:text-xl lg:text-3xl p-[1vw] text-center">
@@ -53,7 +52,6 @@ export default async function ReisegewerbePage() {
           components={components}
         />
       </div>
-      <Footer impressum={impressum} />
     </div>
   );
 }

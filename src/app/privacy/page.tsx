@@ -36,17 +36,15 @@ export default async function PrivacyPage() {
   const { data: legal } = await sanityFetch({
     query: PRIVACY_QUERY,
   });
-  const { data: impressum } = await sanityFetch({ query: IMPRESSUM_QUERY });
+
   return (
     <div className="">
-      <h1 className="pt-[13vw] md:pt-[9vw] lg:pt-[7vw] p-[1vw] font-bold text-xl md:text-2xl lg:text-5xl text-center">
+      <h1 className="pt-16 sm:pt-20 p-[1vw] font-bold text-xl md:text-2xl lg:text-5xl text-center">
         Datenschutz
       </h1>
       <div className="text-md xl:text-xl py-[2vw] px-[6vw]">
         <PortableText value={legal.privacy} components={components} />
       </div>
-
-      <Footer impressum={impressum} />
     </div>
   );
 }

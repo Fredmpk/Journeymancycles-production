@@ -34,7 +34,7 @@ export default async function ProductDetail({
   // .then((result) => result.data); // it returns the part of an array, product.data would fit the type Product
 
   if (!product) {
-    return <div>Product not found</div>;
+    return <div className="pt-30 sm:pt-40">Product not found</div>;
   }
 
   return (
@@ -46,7 +46,7 @@ export default async function ProductDetail({
 
       //   backgroundPosition: "center",
       // }}
-      className="pt-[11vw] md:pt-[7vw] lg:pt-[5vw] flex flex-col justify-center items-center bg-cover bg-zinc-200"
+      className="pt-16 sm:pt-20 flex flex-col justify-center items-center bg-cover bg-zinc-200"
     >
       <div className=" bg-opacity-75 rounded-full pt-[1vw] m-[3vw] ">
         <h1 className="text-black font-bold text-3xl md:text-5xl lg:text-7xl px-[2vw]">

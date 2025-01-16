@@ -23,8 +23,6 @@ export default async function Home() {
 
   const { data: gallery } = await sanityFetch({ query: GALLERY_QUERY });
 
-  const { data: impressum } = await sanityFetch({ query: IMPRESSUM_QUERY });
-
   const { data: friends } = await sanityFetch({ query: FRIENDS_QUERY });
 
   const { data: about } = await sanityFetch({ query: ABOUT_QUERY });
@@ -37,7 +35,6 @@ export default async function Home() {
       <GallerySection gallery={gallery || null}></GallerySection>
       <AboutSection about={about || null}></AboutSection>
       <FriendSection friends={friends || null}></FriendSection>
-      <Footer impressum={impressum || null} />
     </>
   );
 }

@@ -22,13 +22,13 @@ export function HeroSection({ mainVideo }: VideoProps) {
   }, []);
 
   return (
-    <div className="relative w-full h-auto">
+    <div className="relative w-full h-auto pt-16 sm:pt-20">
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="w-full max-w-full pt-[11vw] md:pt-[7vw] lg:pt-[5vw]"
+        className="w-full max-w-full "
         src={mainVideo.asset.url}
       >
         Your browser does not support the video tag.

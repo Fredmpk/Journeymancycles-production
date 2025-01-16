@@ -7,22 +7,18 @@ import { FaInstagram } from "react-icons/fa";
 export function Navbar() {
   return (
     <div className="fixed w-full bg-white opacity-90 shadow-md z-50">
-      <nav className="flex items-center justify-between align-items text-lg md:text-2xl tracking-wide m-[4vw] md:m-[3vw] lg:m-[2vw] h-3 md:h-[1vw] ">
+      <nav className="flex items-center justify-between align-items text-lg md:text-2xl tracking-wide h-16 sm:h-20 px-3 ">
         <a
           href="https://www.instagram.com/journeyman.cycles/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaInstagram className="text-[4vw] lg:text-[2vw]" />
+          <FaInstagram className="text-3xl sm:text-4xl" />
         </a>
-        <div
-          className="relative -1/2 aspect-square  h-[8vw] md:h-[5vw]
-           
-          "
-        ></div>
+
         <Link
           href="/"
-          className="absolute left-1/2 transform -translate-x-1/2 aspect-square  h-[8vw] md:h-[5vw] lg:h-[3vw]"
+          className="absolute left-1/2 transform -translate-x-1/2 aspect-square  h-10 sm:h-12"
         >
           <img src="/img/erdmannlogo.png"></img>
         </Link>
