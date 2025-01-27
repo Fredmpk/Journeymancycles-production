@@ -98,7 +98,7 @@ export default async function ProductDetail({
         )} */}
         <Tabs
           defaultValue="description"
-          className="w-[90vw] xl:w-[70vw] mb-[5vw] xl:mr-[2vw]"
+          className="w-[90vw] xl:w-[70vw] mb-[5vw] xl:mr-[2vw] mx-3 md:mx-8"
         >
           <TabsList>
             <TabsTrigger value="description">Beschreibung</TabsTrigger>
@@ -107,12 +107,16 @@ export default async function ProductDetail({
           <TabsContent value="description" className="">
             <AutosizeTextarea
               placeholder={product.description}
-              maxHeight={700}
+              maxHeight={500}
               className="p-[3vw] text-lg tracking-wide"
             />
           </TabsContent>
           <TabsContent value="datesheet">
-            <AutosizeTextarea placeholder={product.dateSheet} maxHeight={700} />
+            <AutosizeTextarea
+              placeholder={product.dateSheet}
+              maxHeight={500}
+              className="tracking-wide"
+            />
           </TabsContent>
         </Tabs>
       </div>

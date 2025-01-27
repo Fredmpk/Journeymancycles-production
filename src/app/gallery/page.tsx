@@ -27,11 +27,10 @@ export default async function GalleryPage() {
       <div className="bg-[url('/img/gallery-bg.png')] bg-cover w-full pt-16 sm:pt-20">
         <div className="w-full h-full flex justify-center items-center p-4">
           {/* The white background with opacity */}
-          <div className="bg-white bg-opacity-15 rounded-full p-[1vw] m-[3vw]">
-            <h1 className="text-black font-bold text-xl md:text-2xl lg:text-5xl tracking-widest">
-              Galerie
-            </h1>
-          </div>
+
+          <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center tracking-widest">
+            GALERIE
+          </h1>
         </div>
         <div className="flex flex-row">
           <div className="flex flex-col w-[55%]">
