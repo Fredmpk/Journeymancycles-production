@@ -49,7 +49,7 @@ export default async function ProductDetail({
       className="pt-16 sm:pt-20 flex flex-col justify-center items-center bg-cover bg-zinc-200"
     >
       <div className=" bg-opacity-75 rounded-full pt-[1vw] m-[3vw] ">
-        <h1 className="text-black font-bold text-3xl md:text-5xl lg:text-7xl px-[2vw]">
+        <h1 className="text-black font-bold text-3xl md:text-5xl lg:text-7xl px-[2vw] tracking-widest">
           {product.title}
         </h1>
       </div>
@@ -108,7 +108,7 @@ export default async function ProductDetail({
             <AutosizeTextarea
               placeholder={product.description}
               maxHeight={700}
-              className="p-[3vw] text-lg"
+              className="p-[3vw] text-lg tracking-wide"
             />
           </TabsContent>
           <TabsContent value="datesheet">

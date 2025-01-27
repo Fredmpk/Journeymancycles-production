@@ -8,7 +8,7 @@ export default function FriendSection({ friends }: { friends: Friends[] }) {
 
   return (
     <div className="bg-zinc-100 pt-[9vw] md:pt-[7vw]" id="friends">
-      <h1 className=" font-boldtext-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center p-[2vw]">
+      <h1 className=" font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center p-[1vw] tracking-widest">
         FRIENDS
       </h1>
       <div className="flex sm:flex-row flex-wrap justify-between p-[2vw]">

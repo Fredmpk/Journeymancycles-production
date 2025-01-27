@@ -12,7 +12,7 @@ export default function AwardSection() {
     <div className="bg-zinc-100">
       <div className="relative flex flex-col items-center">
         <FaAward className="absolute right-[5vw] top-[9vw] sm:top-[5vw] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl" />
-        <div className="p-[3vw] md:text-2xl lg:text-4xl flex gap-[1vw]">
+        <div className="p-[3vw] md:text-2xl lg:text-4xl flex gap-[1vw] tracking-wider">
           <p> Best Cargo Bike </p>
           <p> Award @</p>
         </div>
@@ -42,6 +42,7 @@ export default function AwardSection() {
           href="https://www.bespoked.cc/post/bespoked-2023-award-winners"
           target="_blank"
           rel="noopener noreferrer"
+          className="tracking-wide"
         >
           <img
             className=" w-[70vw] sm:w-[60vw] rounded-xl -rotate-2 hidden md:block"

@@ -31,8 +31,8 @@ const components: PortableTextComponents = {
 };
 export default function AboutSection({ about }: { about: About }) {
   return (
-    <div className="bg-zinc-200 pt-[9vw] md:pt-[7vw]" id="about">
-      <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center p-[1vw]">
+    <div className="bg-zinc-200 pt-16 sm:pt-20" id="about">
+      <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center p-[1vw] tracking-widest">
         ABOUT
       </h1>
       <div className="flex justify-center py-[3vw]">
@@ -46,7 +46,7 @@ export default function AboutSection({ about }: { about: About }) {
         ></iframe>
       </div>
 
-      <div className="p-[4vw]">
+      <div className="p-[4vw] tracking-wider">
         <PortableText value={about.content || []} components={components} />
       </div>
     </div>

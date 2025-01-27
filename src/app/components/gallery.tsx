@@ -14,11 +14,8 @@ import {
 export default function GallerySection({ gallery }: { gallery: Gallery }) {
   return (
     <>
-      <div
-        className="bg-zinc-300 bg-cover w-full pt-[9vw] md:pt-[7vw]"
-        id="gallery"
-      >
-        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center">
+      <div className="bg-zinc-300 bg-cover w-full pt-16 sm:pt-20" id="gallery">
+        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center tracking-widest">
           GALERIE
         </h1>
 
