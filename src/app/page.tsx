@@ -29,12 +29,24 @@ export default async function Home() {
   console.log("About data:", about);
   return (
     <>
-      <HeroSection mainVideo={hero?.mainVideo || null}></HeroSection>
-      <AwardSection></AwardSection>
-      <ProductsSection products={products || null}></ProductsSection>
-      <GallerySection gallery={gallery || null}></GallerySection>
-      <AboutSection about={about || null}></AboutSection>
-      <FriendSection friends={friends || null}></FriendSection>
+      <section className="overflow-hidden">
+        <HeroSection mainVideo={hero?.mainVideo || null}></HeroSection>
+      </section>
+      <section>
+        <AwardSection></AwardSection>
+      </section>
+      <section>
+        <ProductsSection products={products || null}></ProductsSection>
+      </section>
+      <section>
+        <GallerySection gallery={gallery || null}></GallerySection>
+      </section>
+      <section>
+        <AboutSection about={about || null}></AboutSection>
+      </section>
+      <section>
+        <FriendSection friends={friends || null}></FriendSection>
+      </section>
     </>
   );
 }
