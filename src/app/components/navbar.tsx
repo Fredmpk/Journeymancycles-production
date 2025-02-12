@@ -18,7 +18,7 @@ export function Navbar() {
 
         <Link
           href="/"
-          className="absolute left-1/2 transform -translate-x-1/2 aspect-square  h-10 sm:h-12 overflow-hidden"
+          className="absolute left-1/2 transform -translate-x-1/2 aspect-square  h-10 sm:h-12 "
         >
           <img src="/img/erdmannlogo.png"></img>
         </Link>

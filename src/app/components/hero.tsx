@@ -48,19 +48,7 @@ export function HeroSection({ mainVideo }: VideoProps) {
             >
               s
             </p>
-            <p
-              style={{ transitionDuration: "1500ms" }}
-              className={`px-[1vw] ${isLoaded ? "translate-x-0" : " opacity-0 translate-x-full"}`}
-            >
-              -
-            </p>
           </div>
-          <p
-            style={{ transitionDuration: "1500ms" }}
-            className={`p-1 ${isLoaded ? "translate-x-0" : " opacity-0 translate-x-full"}`}
-          >
-            the best cargobikes{" "}
-          </p>
         </div>
       </div>
     </div>

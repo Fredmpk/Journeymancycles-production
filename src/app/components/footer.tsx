@@ -20,7 +20,7 @@ export default function Footer({ impressum }: { impressum: Legal }) {
           <img
             src="/img/insta-preview-3.png"
             alt="Instagram"
-            className="w-[10vw]"
+            className="w-[10vw] "
           />
         </a>{" "}
       </div>
