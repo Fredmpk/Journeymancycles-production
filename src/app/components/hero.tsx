@@ -40,7 +40,7 @@ export function HeroSection({ mainVideo }: VideoProps) {
               style={{ transitionDuration: "1500ms" }}
               className={` transition-all ease-out ${isLoaded ? "translate-x-0" : "-translate-x-full"}`}
             >
-              take that for good
+              take that for bad
             </p>
             <p
               style={{ transitionDuration: "11000ms" }}
