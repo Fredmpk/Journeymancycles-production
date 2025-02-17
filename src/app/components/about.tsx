@@ -51,10 +51,10 @@ export default function AboutSection({ about }: { about: About }) {
       <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center pb-8 tracking-widest">
         ABOUT
       </h1>
-      <div className="flex justify-center py-[3vw]">
+      <div className="flex justify-center p-[3vw]">
         <iframe
-          title="vimeo-player"
-          src={about.embedVideo}
+          title="youtube-player"
+          src={`https://www.youtube.com/embed/${about.embedVideo}`}
           width="960"
           height="490"
           allowFullScreen
