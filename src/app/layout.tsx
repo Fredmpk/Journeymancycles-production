@@ -7,7 +7,7 @@ import { Navbar } from "./components/navbar";
 import { Anton, Dancing_Script, Goldman } from "next/font/google";
 import { IMPRESSUM_QUERY } from "@/sanity/queries";
 
-const goldman = Goldman({ subsets: ["latin"], weight: "400" });
+const goldman = Goldman({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Journeyman Cycles",

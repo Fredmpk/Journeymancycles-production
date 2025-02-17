@@ -32,11 +32,11 @@ export default function AwardSection() {
           </p>
         </a>
       </div>
-      <div className="flex flex-row justify-between items-center p-[2vw]">
+      <div className="flex flex-row justify-between items-center p-[4vw]">
         <img
-          src="img/award-grey.jpg"
+          src="img/award-grey.png"
           alt="EIn Bild des Preises"
-          className="w-1/4 rounded-full"
+          className="w-1/4"
         />
         <a
           href="https://www.bespoked.cc/post/bespoked-2023-award-winners"
@@ -63,14 +63,14 @@ export default function AwardSection() {
       </div>
       <div className="flex justify-end">
         <a
-          href="https://www.youtube.com/watch?v=an1yIQyBUQg&t=32s"
+          href="https://youtu.be/an1yIQyBUQg?t=332"
           className="hover:text-red-500 text-lg p-[2vw] mr-[4vw]
           flex gap-2 items-center"
           target="_blank"
           rel="noopener noreferrer"
         >
           <p className="text-xs md:text-lg">
-            Video-Interview auf der Bespoked Messe ab 5:33
+            Video-Interview auf der Bespoked Messe
           </p>
           <IoArrowRedoCircle />
         </a>

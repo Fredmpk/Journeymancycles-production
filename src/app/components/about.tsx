@@ -10,6 +10,20 @@ const components: PortableTextComponents = {
       return <p className="pb-4">{children}</p>;
     },
     h1: ({ children }) => <h1 className="text-2xl pb-4">{children}</h1>,
+    h2: ({ children }: any) => (
+      <h2 className="text-2xl font-bold mb-3">{children}</h2>
+    ),
+    h3: ({ children }: any) => (
+      <h3 className="text-xl font-bold mb-2">{children}</h3>
+    ),
+    blockquote: ({ children }: any) => (
+      <blockquote className="border-l-4 border-gray-200 pl-4 my-4">
+        {children}
+      </blockquote>
+    ),
+    h4: ({ children }) => (
+      <h4 className="text-xl font-semibold pb-4">{children}</h4>
+    ),
   },
   list: {
     bullet: ({ children }) => (
@@ -30,9 +44,11 @@ const components: PortableTextComponents = {
   },
 };
 export default function AboutSection({ about }: { about: About }) {
+  console.log("about", about.content);
+
   return (
     <div className="bg-zinc-200 pt-16 sm:pt-20" id="about">
-      <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center p-[1vw] tracking-widest">
+      <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center pb-8 tracking-widest">
         ABOUT
       </h1>
       <div className="flex justify-center py-[3vw]">

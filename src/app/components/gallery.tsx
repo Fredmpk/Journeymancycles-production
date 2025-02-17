@@ -15,7 +15,7 @@ export default function GallerySection({ gallery }: { gallery: Gallery }) {
   return (
     <>
       <div className="bg-zinc-300 bg-cover w-full pt-16 sm:pt-20" id="gallery">
-        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center tracking-widest">
+        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center tracking-widest pb-8">
           GALERIE
         </h1>
 
@@ -78,7 +78,7 @@ export default function GallerySection({ gallery }: { gallery: Gallery }) {
         <div className="flex justify-center w-auto">
           <Link
             href={`/gallery`}
-            className={`${buttonVariants()} px-[7vw] m-[1vw] sm:text-xl`}
+            className={`${buttonVariants()} px-[7vw] my-8 m-4 sm:text-xl`}
           >
             Mehr
           </Link>

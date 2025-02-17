@@ -13,6 +13,9 @@ const components: PortableTextComponents = {
       return <p className="pb-4">{children}</p>;
     },
     h1: ({ children }) => <h1 className="text-2xl pb-4">{children}</h1>,
+    h4: ({ children }) => (
+      <h4 className="text-xl font-semibold pb-4">{children}</h4>
+    ),
   },
   list: {
     bullet: ({ children }) => (
@@ -37,10 +40,9 @@ export default async function ReisegewerbePage() {
   const { data: reisegewerbe } = await sanityFetch({
     query: REISEGEWERBE_QUERY,
   });
-
   return (
-    <div className="">
-      <h1 className="pt-16 sm:pt-20 p-[1vw] font-bold text-xl md:text-2xl lg:text-5xl text-center">
+    <div className="pt-4">
+      <h1 className="pt-20 sm:pt-20 p-[1vw] font-bold text-2xl md:text-3xl lg:text-5xl text-center">
         {reisegewerbe.title}
       </h1>
       <h2 className="italic text-lg md:text-xl lg:text-3xl p-[1vw] text-center">

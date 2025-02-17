@@ -84,7 +84,17 @@ export const REISEGEWERBE_QUERY = defineQuery(`*[_type == "reisegewerbe"][0]{
   _id,
 title,
 subtitle,
-description,
+description[] {
+...,
+_type,
+marks,
+children[] {
+...,
+_type,
+marks,
+text
+}
+}
 }`);
 
 export const FRIENDS_QUERY =

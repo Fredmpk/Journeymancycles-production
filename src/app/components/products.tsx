@@ -14,7 +14,7 @@ export default function ProductsSection({ products }: { products: Product[] }) {
       className="relative w-full h-full bg-zinc-200 pt-16 sm:pt-20"
       id="products"
     >
-      <h1 className=" font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center tracking-widest">
+      <h1 className=" font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center tracking-widest pb-8">
         MODELLE
       </h1>
 
