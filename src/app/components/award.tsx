@@ -1,6 +1,9 @@
+"use client";
 import { FaAward } from "react-icons/fa";
 import { IoArrowRedoCircle } from "react-icons/io5";
 import { Inter } from "next/font/google";
+import { useRef } from "react";
+import { useInView } from "motion/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -8,10 +11,31 @@ const inter = Inter({
   style: ["normal", "italic"],
 });
 export default function AwardSection() {
+  const AwardIconRef = useRef(null);
+  const AwardFigureRef = useRef(null);
+  const AwardTextRef = useRef(null);
+  const isAwardIconInView = useInView(AwardIconRef, {
+    once: false,
+    margin: "0px 0px -100px 0px",
+  });
+
+  const isAwardTextInView = useInView(AwardFigureRef, {
+    once: false,
+    margin: "0px 0px 0px 0px",
+  });
   return (
     <div className="bg-zinc-100">
       <div className="relative flex flex-col items-center">
-        <FaAward className="absolute right-[5vw] top-[9vw] sm:top-[5vw] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl" />
+        <div ref={AwardIconRef}>
+          <FaAward
+            style={{
+              transform: isAwardIconInView ? "none" : "translateX(450%)",
+              opacity: isAwardIconInView ? 1 : 0,
+              transition: "all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
+            className="absolute right-[5vw] top-[9vw] sm:top-[5vw] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+          />
+        </div>
         <div className="p-[3vw] md:text-2xl lg:text-4xl flex gap-[1vw] tracking-wider">
           <p> Best Cargo Bike </p>
           <p> Award @</p>
@@ -34,8 +58,14 @@ export default function AwardSection() {
       </div>
       <div className="flex flex-row justify-between items-center p-[4vw]">
         <img
+          ref={AwardFigureRef}
           src="img/award-grey.png"
           alt="EIn Bild des Preises"
+          style={{
+            transform: isAwardIconInView ? "none" : "translateX(-350%)",
+            opacity: isAwardIconInView ? 1 : 0,
+            transition: "all 2.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
           className="w-1/4"
         />
         <a
@@ -43,6 +73,12 @@ export default function AwardSection() {
           target="_blank"
           rel="noopener noreferrer"
           className="tracking-wide"
+          ref={AwardTextRef}
+          style={{
+            transform: isAwardTextInView ? "none" : "translateX(200%)",
+            opacity: isAwardTextInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
         >
           <img
             className=" w-[70vw] sm:w-[60vw] rounded-xl -rotate-2 hidden md:block"
