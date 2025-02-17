@@ -26,11 +26,11 @@ export default async function Home() {
   const { data: friends } = await sanityFetch({ query: FRIENDS_QUERY });
 
   const { data: about } = await sanityFetch({ query: ABOUT_QUERY });
-  console.log("About data:", about);
+  console.log("hero data:", hero);
   return (
     <>
       <section className="overflow-hidden">
-        <HeroSection mainVideo={hero?.mainVideo || null}></HeroSection>
+        <HeroSection hero={hero || null}></HeroSection>
       </section>
       <section>
         <AwardSection></AwardSection>

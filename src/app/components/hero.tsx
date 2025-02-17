@@ -1,22 +1,31 @@
 "use client";
 import { client } from "@/sanity/client";
+import { log } from "console";
 import { useEffect, useState } from "react";
 
 interface VideoProps {
-  mainVideo: {
-    asset?: {
-      url?: string;
+  hero: {
+    mainVideoQuer: {
+      asset?: {
+        url?: string;
+      } | null;
     } | null;
-  } | null;
+    mainVideoHoch: {
+      asset?: {
+        url?: string;
+      } | null;
+    } | null;
+  };
 }
 
-export function HeroSection({ mainVideo }: VideoProps) {
+export function HeroSection({ hero }: VideoProps) {
   // Check if video asset exists
-  if (!mainVideo?.asset?.url) {
+  if (!hero.mainVideoQuer?.asset?.url || !hero.mainVideoHoch?.asset?.url) {
     return null;
   }
   const [isLoaded, setIsLoaded] = useState(false);
-
+  console.log("hero:");
+  console.log(hero);
   useEffect(() => {
     setIsLoaded(true);
   }, []);
@@ -28,13 +37,23 @@ export function HeroSection({ mainVideo }: VideoProps) {
         muted
         loop
         playsInline
-        className="w-full max-w-full "
-        src={mainVideo.asset.url}
+        className="w-full h-[90vh] object-cover max-w-full md:hidden"
+        src={hero.mainVideoHoch.asset.url}
       >
         Your browser does not support the video tag.
       </video>
-      <div className="absolute top-3/4 left-1/2 w-full md:px-8 lg:px-16 ">
-        <div className="max-w-xl mx-4 md:mx-8 text-black text-xl sm:text-2xl md:text-4xl lg:text-5xl">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="w-full max-w-full hidden md:block"
+        src={hero.mainVideoQuer.asset.url}
+      >
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute top-3/4 left-[55%] w-full transform -translate-x-1/2">
+        <div className="max-w-xl mx-4 md:mx-8 text-black text-3xl sm:text-3xl md:text-4xl lg:text-5xl">
           <div className="flex text-white">
             <p
               style={{ transitionDuration: "1500ms" }}

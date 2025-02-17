@@ -36,10 +36,16 @@ export const PRODUCT_DETAIL_QUERY = defineQuery(
 
 export const HERO_QUERY = defineQuery(`*[_type == "hero"][0]{
     _id,
-    mainVideo {
+    mainVideoQuer {
       asset->{
         url
       }
+},
+    mainVideoHoch {
+      asset->{
+        url
+      }
+
     }
   }`);
 
