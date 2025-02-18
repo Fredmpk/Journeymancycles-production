@@ -32,7 +32,7 @@ export default async function Home() {
       <section className="overflow-hidden">
         <HeroSection hero={hero || null}></HeroSection>
       </section>
-      <section>
+      <section className="overflow-hidden">
         <AwardSection></AwardSection>
       </section>
       <section>
