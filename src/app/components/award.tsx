@@ -31,7 +31,7 @@ export default function AwardSection() {
             style={{
               transform: isAwardIconInView ? "none" : "translateX(450%)",
               opacity: isAwardIconInView ? 1 : 0,
-              transition: "all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+              transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
             }}
             className="absolute right-[5vw] top-[9vw] sm:top-[5vw] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
           />
@@ -64,7 +64,7 @@ export default function AwardSection() {
           style={{
             transform: isAwardIconInView ? "none" : "translateX(-350%)",
             opacity: isAwardIconInView ? 1 : 0,
-            transition: "all 2.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            transition: "all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
           className="w-1/4"
         />
@@ -77,7 +77,7 @@ export default function AwardSection() {
           style={{
             transform: isAwardTextInView ? "none" : "translateX(200%)",
             opacity: isAwardTextInView ? 1 : 0,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
         >
           <img
