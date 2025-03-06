@@ -62,7 +62,7 @@ export default function AboutSection({ about }: { about: About }) {
         ></iframe>
       </div>
 
-      <div className="p-[4vw] tracking-wider">
+      <div className="p-[4vw] tracking-wider break-words">
         <PortableText value={about.content || []} components={components} />
       </div>
     </div>
