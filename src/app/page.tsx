@@ -41,7 +41,7 @@ export default async function Home() {
       <section>
         <GallerySection gallery={gallery || null}></GallerySection>
       </section>
-      <section>
+      <section className="overflow-hidden">
         <AboutSection about={about || null}></AboutSection>
       </section>
       <section>
