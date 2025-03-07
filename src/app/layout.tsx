@@ -11,6 +11,7 @@ const goldman = Goldman({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Journeyman Cycles",
+  icons: { icon: "/img/erdmannlogo.png", apple: "/img/erdmannlogo.png" },
   description: "Your local Cargo bike manufacturer",
   viewport: {
     width: "device-width",
