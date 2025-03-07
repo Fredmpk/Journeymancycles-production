@@ -16,12 +16,12 @@ export function Navbar() {
           <FaInstagram className="text-3xl sm:text-4xl" />
         </a>
 
-        <Link
+        {/* <Link
           href="/"
           className="absolute left-1/2 transform -translate-x-1/2 aspect-square  h-10 sm:h-12 "
         >
           <img src="/img/erdmannlogo.png"></img>
-        </Link>
+        </Link> */}
 
         <ul
           className="items-center gap-4 lg:gap-9 hidden md:flex"

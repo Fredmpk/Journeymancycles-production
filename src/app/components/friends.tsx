@@ -11,7 +11,7 @@ export default function FriendSection({ friends }: { friends: Friends[] }) {
       <h1 className=" font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center pb-8 tracking-widest">
         FRIENDS
       </h1>
-      <div className="flex sm:flex-row flex-wrap justify-between p-[2vw]">
+      <div className="flex sm:flex-row flex-wrap justify-center p-[2vw]">
         {friends.map((friend) => (
           <a
             key={friend._id}
@@ -29,7 +29,7 @@ export default function FriendSection({ friends }: { friends: Friends[] }) {
               <img
                 src={urlFor(friend.icon).url()}
                 alt={friend.title || "Friend"}
-                className=" w-[15vw] h-[15vw] object-cover rounded-full"
+                className=" w-[25vw] h-[25vw] sm:w-[15vw] sm:h-[15vw]  lg:h-[12vw] lg:w-[12vw] object-cover rounded-full"
               />
             )}
             <p

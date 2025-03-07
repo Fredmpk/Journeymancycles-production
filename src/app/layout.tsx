@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Footer from "./components/footer";
-
 import "./globals.css";
 import { sanityFetch, SanityLive } from "@/sanity/live";
 import { Navbar } from "./components/navbar";
@@ -11,8 +10,11 @@ const goldman = Goldman({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Journeyman Cycles",
-  icons: { icon: "/img/erdmannlogo.png", apple: "/img/erdmannlogo.png" },
   description: "Your local Cargo bike manufacturer",
+  icons: {
+    icon: "/icon.ico",
+    apple: "/icon.ico",
+  },
   viewport: {
     width: "device-width",
     initialScale: 1,

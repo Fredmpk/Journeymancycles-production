@@ -15,14 +15,10 @@ export default function AwardSection() {
   const AwardFigureRef = useRef(null);
   const AwardTextRef = useRef(null);
   const isAwardIconInView = useInView(AwardIconRef, {
-    once: false,
+    once: true,
     margin: "0px 0px -100px 0px",
   });
 
-  const isAwardTextInView = useInView(AwardFigureRef, {
-    once: false,
-    margin: "0px 0px 0px 0px",
-  });
   return (
     <div className="bg-zinc-100">
       <div className="relative flex flex-col items-center">
@@ -75,8 +71,8 @@ export default function AwardSection() {
           className="tracking-wide"
           ref={AwardTextRef}
           style={{
-            transform: isAwardTextInView ? "none" : "translateX(200%)",
-            opacity: isAwardTextInView ? 1 : 0,
+            transform: isAwardIconInView ? "none" : "translateX(200%)",
+            opacity: isAwardIconInView ? 1 : 0,
             transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
         >
