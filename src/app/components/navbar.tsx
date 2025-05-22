@@ -37,9 +37,6 @@ export function Navbar() {
           <li>
             <Link href="/#about">About</Link>
           </li>
-          {/* <li>
-            <a href="#friends">Friends</a>
-          </li> */}
         </ul>
         <BurgerMenu />
       </nav>
