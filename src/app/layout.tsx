@@ -29,7 +29,7 @@ export default async function RootLayout({
   const { data: impressum } = await sanityFetch({ query: IMPRESSUM_QUERY });
   return (
     <html lang="de">
-      <body className={goldman.className}>
+      <body className={`${goldman.className} scroll-smooth`}>
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer impressum={impressum}></Footer>
